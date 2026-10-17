@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeVault ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Glow Blobs for Aesthetics -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>VibeVault ✨</h1>
+            <p>Your daily dose of aesthetic inspiration & code fuel.</p>
+            <button id="openModalBtn" class="primary-btn">Add New Vibe ＋</button>
+        </header>
+
+        <!-- Filter Categories -->
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="Coding">Coding</button>
+            <button class="filter-btn" data-category="Chill">Chill</button>
+            <button class="filter-btn" data-category="Hustle">Hustle</button>
+        </div>
+
+        <!-- Cards Grid (Dynamically Populated via JS/JSON) -->
+        <div id="vibesGrid" class="vibes-grid">
+            <!-- Cards load here -->
+        </div>
+    </div>
+
+    <!-- Modal for Adding a Vibe -->
+    <div id="vibeModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-btn">&times;</span>
+            <h2>Share Your Vibe</h2>
+            <form id="vibeForm">
+                <input type="text" id="quoteText" placeholder="Drop an inspiring quote..." required>
+                <input type="text" id="authorText" placeholder="Your name or handle" required>
+                <select id="categorySelect">
+                    <option value="Coding">Coding</option>
+                    <option value="Chill">Chill</option>
+                    <option value="Hustle">Hustle</option>
+                </select>
+                <button type="submit" class="primary-btn">Save to Vault</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
